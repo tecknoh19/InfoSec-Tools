@@ -5,7 +5,6 @@ import socket, time, telnetlib, sys, os.path
 
 
 # Set output log filename
-#name_tag = datetime.today().strftime('%Y-%m-%d-%H:%M:%S')
 log = "telnet-scan-log" + datetime.today().strftime('%Y-%m-%d-%H:%M:%S') + ".txt"
 
 # Define variables
@@ -13,8 +12,6 @@ start_ip = raw_input("Start IP: ") # Get start IP from user
 end_ip = raw_input("End IP: ") # Get end IP from user
 startTime = datetime.now() # Scan execution time counter start
 port = 23 # Define port, in this case 23 for telnet
-retry = 1 # number of times to retry on fail
-delay = 2 # number of seconds for delay
 ctimeout = 2 # number of seconds before connection attempt should time out
 
 def intro(): 
